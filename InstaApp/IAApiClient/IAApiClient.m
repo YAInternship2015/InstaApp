@@ -21,7 +21,7 @@ static const NSString * kCountPagination = @"10";
 
 @implementation IAApiClient
 
-+ (void) getDataNextURL:(NSString *)nextURL completeBlock:(IASuccesBlock)block failure:(IAFailureBlock)failure {
++ (void) loadDataNextURL:(NSString *)nextURL completeBlock:(IASuccesBlock)block failure:(IAFailureBlock)failure {
     NSString *urlString = nextURL ? nextURL : kBaseRequestURL;
     NSDictionary *params = @{@"access_token": [[NSUserDefaults standardUserDefaults] stringForKey:@"token"], @"count":kCountPagination};
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];

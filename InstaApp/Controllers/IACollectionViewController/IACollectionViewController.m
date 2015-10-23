@@ -21,8 +21,13 @@ int const kValueToUploadCollection = 3;
 @implementation IACollectionViewController
 
 - (void)viewDidLoad {
-#warning забыли вызвать метод у super
+    [super viewDidLoad];
     self.dataSource = [[IADataSource alloc]initWithDelegate:self];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    self.dataSource.delegate = self;
+    [self.collectionView reloadData];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {

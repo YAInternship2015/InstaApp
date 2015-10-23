@@ -14,7 +14,6 @@ typedef void (^IAFailureBlock)(NSError *error);
 
 @interface IAApiClient : NSObject
 
-#warning вместо get лучше "load" или "request", так как операция длительная, а не мгновенная
-+ (void) getDataNextURL:(NSString *)nextURL completeBlock:(IASuccesBlock)block failure:(IAFailureBlock)failure;
++ (void) loadDataNextURL:(NSString *)nextURL completeBlock:(IASuccesBlock)block failure:(IAFailureBlock)failure;
 
 @end

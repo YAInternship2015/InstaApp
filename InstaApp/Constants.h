@@ -33,10 +33,6 @@ static NSString *const NotificationNewDataNeedToDownload= @"NotificationNewDataN
 static NSString *const NotificationTokenWasAcquiredReadyToParce= @"NotificationTokenWasAcquiredReadyToParce";
 
 
-#pragma mark - UIImage+OtherPic
-
-static NSString *const kNoImage = @"noPic";
-
 #define  captionObject(i, arr)\
 [[arr[i] objectForKey:@"caption"] objectForKey:@"text"]
 

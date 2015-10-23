@@ -12,6 +12,6 @@
 
 + (id)dataLoader;
 
-- (void)getTokenWithRecievedURl:(NSURL *)url;
+- (void)requestTokenWithRecievedURL:(NSURL *)url;
 
 @end

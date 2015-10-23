@@ -12,7 +12,7 @@
 #import "IAContainerViewController.h"
 #import <AFNetworking.h>
 #import "IADataSource.h"
-#import "IALogin.h"
+#import "IALoginService.h"
 
 @interface IAMainViewController ()<IADataSourceDelegate>
 
@@ -46,7 +46,7 @@ static NSString *const EmbedContainer = @"EmbedContainer";
 }
 
 - (IBAction)loginAction:(id)sender{
-    [IALogin startLogin];
+    [IALoginService startLogin];
 }
 
 @end

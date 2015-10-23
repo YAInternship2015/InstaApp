@@ -6,13 +6,13 @@
 //  Copyright © 2015 Maks. All rights reserved.
 //
 
-#import "IALogin.h"
+#import "IALoginService.h"
 #import "IALoader.h"
 #import "IAApiClient.h"
 #import "ConstantsOfInstagramAPI.h"
 #import <AFNetworking.h>
 
-@implementation IALogin
+@implementation IALoginService
 
 + (void)startLogin {
     NSString *fullAuthUrlString = [[NSString alloc]
@@ -62,7 +62,7 @@
               if (userName.length > 0 ) {
                   [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginWasAcquired object:userName];
               }
-              [IAApiClient getDataNextURL:nil completeBlock:complBlock failure:failure];
+              [IAApiClient loadDataNextURL:nil completeBlock:complBlock failure:failure];
           }
           failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"Error: %@", error);

@@ -10,9 +10,6 @@
 #import "IAModelItem.h"
 
 #import <MagicalRecord/MagicalRecord.h>
-#warning следующие два импорта не нужны
-#import <MagicalRecord/MagicalRecord+ShorthandMethods.h>
-#import <MagicalRecord/MagicalRecordShorthandMethodAliases.h>
 
 static NSString *const kName = @"text";
 
@@ -45,11 +42,7 @@ static NSString *const kName = @"text";
 }
 
 - (IAModelItem *)modelAtIndex:(NSInteger)index {
-    return self.fetchedResultsController.fetchedObjects[index];
-#warning удаляйте закоментированный код
-//    IAModelItem *model = [self.fetchedResultsController objectAtIndexPath:indexPath];
-//    return model;
-    
+    return self.fetchedResultsController.fetchedObjects[index];    
 }
 
 - (void)removeModelAtIndex:(NSIndexPath *)indexPath {

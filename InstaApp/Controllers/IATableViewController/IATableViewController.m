@@ -25,6 +25,11 @@ NSInteger const kValueToUploadTable = 3;
     self.dataSource = [[IADataSource alloc]initWithDelegate:self];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    self.dataSource.delegate = self;
+    [self.tableView reloadData];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.dataSource countOfModels];
 }

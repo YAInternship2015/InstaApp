@@ -10,6 +10,7 @@
 #define PrefixHeader_pch
 
 #import "Constants.h"
+#import "UIImage+setNoImage.h"
 
 #pragma mark - Model
 
@@ -19,7 +20,5 @@
 #pragma mark - MagicalRecord
 
 #import <MagicalRecord/MagicalRecord.h>
-#import <MagicalRecord/MagicalRecord+ShorthandMethods.h>
-#import <MagicalRecord/MagicalRecordShorthandMethodAliases.h>
 
 #endif 

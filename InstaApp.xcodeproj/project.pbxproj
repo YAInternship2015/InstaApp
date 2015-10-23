@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D62DD321BD3A0F700F7C745 /* IALogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D62DD311BD3A0F700F7C745 /* IALogin.m */; settings = {ASSET_TAGS = (); }; };
-		2D62DD361BD3A3A900F7C745 /* IALoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D62DD351BD3A3A900F7C745 /* IALoader.m */; settings = {ASSET_TAGS = (); }; };
-		2D62DD3A1BD3B3C800F7C745 /* IATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D62DD391BD3B3C800F7C745 /* IATableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		2D62DD3E1BD3B42B00F7C745 /* IACollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D62DD3D1BD3B42B00F7C745 /* IACollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
-		2D62DD421BD3BEBC00F7C745 /* IAContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D62DD411BD3BEBC00F7C745 /* IAContainerViewController.m */; settings = {ASSET_TAGS = (); }; };
-		2D9538141BD83F460048B0B4 /* IACollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9538131BD83F460048B0B4 /* IACollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		2DE5D2031BD40366006153C6 /* IATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5D2021BD40366006153C6 /* IATableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		2D62DD321BD3A0F700F7C745 /* IALoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D62DD311BD3A0F700F7C745 /* IALoginService.m */; };
+		2D62DD361BD3A3A900F7C745 /* IALoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D62DD351BD3A3A900F7C745 /* IALoader.m */; };
+		2D62DD3A1BD3B3C800F7C745 /* IATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D62DD391BD3B3C800F7C745 /* IATableViewController.m */; };
+		2D62DD3E1BD3B42B00F7C745 /* IACollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D62DD3D1BD3B42B00F7C745 /* IACollectionViewController.m */; };
+		2D62DD421BD3BEBC00F7C745 /* IAContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D62DD411BD3BEBC00F7C745 /* IAContainerViewController.m */; };
+		2D9538141BD83F460048B0B4 /* IACollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9538131BD83F460048B0B4 /* IACollectionViewCell.m */; };
+		2DE5D2031BD40366006153C6 /* IATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5D2021BD40366006153C6 /* IATableViewCell.m */; };
+		2DEDC34D1BDA97DD003A022F /* UIImage+setNoImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEDC34C1BDA97DD003A022F /* UIImage+setNoImage.m */; };
 		3AD4BA7144512DECFC2EB2A9 /* libPods-InstaApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B88A81ADFD41D9BB3F0B15E /* libPods-InstaApp.a */; };
 		FC8411501BCC437B00BF7F00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC84114F1BCC437B00BF7F00 /* main.m */; };
 		FC8411531BCC437B00BF7F00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8411521BCC437B00BF7F00 /* AppDelegate.m */; };
@@ -21,19 +22,19 @@
 		FC8411591BCC437B00BF7F00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8411571BCC437B00BF7F00 /* Main.storyboard */; };
 		FC84115C1BCC437B00BF7F00 /* InstaApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC84115A1BCC437B00BF7F00 /* InstaApp.xcdatamodeld */; };
 		FC84115E1BCC437B00BF7F00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC84115D1BCC437B00BF7F00 /* Assets.xcassets */; };
-		FC84116B1BCC440900BF7F00 /* IADataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FC84116A1BCC440900BF7F00 /* IADataSource.m */; settings = {ASSET_TAGS = (); }; };
-		FC8906151BCD8A5500EE2188 /* IAApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8906141BCD8A5500EE2188 /* IAApiClient.m */; settings = {ASSET_TAGS = (); }; };
-		FCC1A9441BD7F94B00C9253A /* IAContainerSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC1A9431BD7F94B00C9253A /* IAContainerSegue.m */; settings = {ASSET_TAGS = (); }; };
-		FCCA43731BD42FDD000E6031 /* IAModelItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA43701BD42FDD000E6031 /* IAModelItem+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
-		FCCA43741BD42FDD000E6031 /* IAModelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA43721BD42FDD000E6031 /* IAModelItem.m */; settings = {ASSET_TAGS = (); }; };
+		FC84116B1BCC440900BF7F00 /* IADataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FC84116A1BCC440900BF7F00 /* IADataSource.m */; };
+		FC8906151BCD8A5500EE2188 /* IAApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8906141BCD8A5500EE2188 /* IAApiClient.m */; };
+		FCC1A9441BD7F94B00C9253A /* IAContainerSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC1A9431BD7F94B00C9253A /* IAContainerSegue.m */; };
+		FCCA43731BD42FDD000E6031 /* IAModelItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA43701BD42FDD000E6031 /* IAModelItem+CoreDataProperties.m */; };
+		FCCA43741BD42FDD000E6031 /* IAModelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA43721BD42FDD000E6031 /* IAModelItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B88A81ADFD41D9BB3F0B15E /* libPods-InstaApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InstaApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02F77A1BCE6383005AC429 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		2D2FDF581BD3864F002DD72F /* ConstantsOfInstagramAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstantsOfInstagramAPI.h; sourceTree = "<group>"; };
-		2D62DD301BD3A0F700F7C745 /* IALogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IALogin.h; sourceTree = "<group>"; };
-		2D62DD311BD3A0F700F7C745 /* IALogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IALogin.m; sourceTree = "<group>"; };
+		2D62DD301BD3A0F700F7C745 /* IALoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IALoginService.h; sourceTree = "<group>"; };
+		2D62DD311BD3A0F700F7C745 /* IALoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IALoginService.m; sourceTree = "<group>"; };
 		2D62DD341BD3A3A900F7C745 /* IALoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IALoader.h; path = IADataManager/IALoader.h; sourceTree = "<group>"; };
 		2D62DD351BD3A3A900F7C745 /* IALoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IALoader.m; path = IADataManager/IALoader.m; sourceTree = "<group>"; };
 		2D62DD381BD3B3C800F7C745 /* IATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IATableViewController.h; path = Controllers/IATableViewController/IATableViewController.h; sourceTree = "<group>"; };
@@ -46,6 +47,8 @@
 		2D9538131BD83F460048B0B4 /* IACollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IACollectionViewCell.m; path = Cells/IATableViewCell/IACollectionViewCell.m; sourceTree = "<group>"; };
 		2DE5D2011BD40366006153C6 /* IATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IATableViewCell.h; path = Cells/IATableViewCell/IATableViewCell.h; sourceTree = "<group>"; };
 		2DE5D2021BD40366006153C6 /* IATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IATableViewCell.m; path = Cells/IATableViewCell/IATableViewCell.m; sourceTree = "<group>"; };
+		2DEDC34B1BDA97DD003A022F /* UIImage+setNoImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+setNoImage.h"; path = "Categories/UIImage+setNoImage/UIImage+setNoImage.h"; sourceTree = "<group>"; };
+		2DEDC34C1BDA97DD003A022F /* UIImage+setNoImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+setNoImage.m"; path = "Categories/UIImage+setNoImage/UIImage+setNoImage.m"; sourceTree = "<group>"; };
 		44F121D20E20FA217C48F0E9 /* Pods-InstaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaApp/Pods-InstaApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E2516217F1EF06FE212D940D /* Pods-InstaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaApp/Pods-InstaApp.release.xcconfig"; sourceTree = "<group>"; };
 		FC84114B1BCC437B00BF7F00 /* InstaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,8 +89,8 @@
 		2D62DD2F1BD3A0D100F7C745 /* IALogin */ = {
 			isa = PBXGroup;
 			children = (
-				2D62DD301BD3A0F700F7C745 /* IALogin.h */,
-				2D62DD311BD3A0F700F7C745 /* IALogin.m */,
+				2D62DD301BD3A0F700F7C745 /* IALoginService.h */,
+				2D62DD311BD3A0F700F7C745 /* IALoginService.m */,
 			);
 			name = IALogin;
 			sourceTree = "<group>";
@@ -155,6 +158,15 @@
 			name = IATableViewCell;
 			sourceTree = "<group>";
 		};
+		2DEDC3471BDA952C003A022F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2DEDC34B1BDA97DD003A022F /* UIImage+setNoImage.h */,
+				2DEDC34C1BDA97DD003A022F /* UIImage+setNoImage.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		60D0B45BB69229FF26F980C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +205,7 @@
 		FC84114D1BCC437B00BF7F00 /* InstaApp */ = {
 			isa = PBXGroup;
 			children = (
+				2DEDC3471BDA952C003A022F /* Categories */,
 				FCC1A9401BD7F8E800C9253A /* Storyboards */,
 				2DE5D1FF1BD40326006153C6 /* Cells */,
 				2D62DD331BD3A37600F7C745 /* IADataManager */,
@@ -395,11 +408,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC8411561BCC437B00BF7F00 /* IAMainViewController.m in Sources */,
+				2DEDC34D1BDA97DD003A022F /* UIImage+setNoImage.m in Sources */,
 				FC84115C1BCC437B00BF7F00 /* InstaApp.xcdatamodeld in Sources */,
 				FC8411531BCC437B00BF7F00 /* AppDelegate.m in Sources */,
 				FC8906151BCD8A5500EE2188 /* IAApiClient.m in Sources */,
 				2D62DD3A1BD3B3C800F7C745 /* IATableViewController.m in Sources */,
-				2D62DD321BD3A0F700F7C745 /* IALogin.m in Sources */,
+				2D62DD321BD3A0F700F7C745 /* IALoginService.m in Sources */,
 				FCCA43731BD42FDD000E6031 /* IAModelItem+CoreDataProperties.m in Sources */,
 				FC8411501BCC437B00BF7F00 /* main.m in Sources */,
 				2D62DD3E1BD3B42B00F7C745 /* IACollectionViewController.m in Sources */,

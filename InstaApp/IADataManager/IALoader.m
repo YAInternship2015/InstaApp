@@ -10,7 +10,7 @@
 #import "IADataSource.h"
 #import "AFNetworking.h"
 #import "IAApiclient.h"
-#import "IALogin.h"
+#import "IALoginService.h"
 
 @interface IALoader()<IADataSourceDelegate>
 
@@ -23,35 +23,38 @@
 @implementation IALoader
 
 
-+ (id)dataLoader
-{
-#warning это - неправильное объявление синглтона, правильное то, где используется dispatch_once. Легко находится в гугле
++ (id)dataLoader {
     static IALoader *loader;
-    if (loader == nil) {
-    
-    loader = [[IALoader alloc] init];
-#warning настройка объекта должна происходить в init
-    loader.dataSource = [[IADataSource alloc]initWithDelegate:loader];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        loader = [[IALoader alloc] init];
+    });
     [[NSNotificationCenter defaultCenter] addObserver:loader selector:@selector(needMore)
                                                  name:NotificationNewDataNeedToDownload object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:loader selector:@selector(parseDataWithNotification:)
-                                                     name:NotificationTokenWasAcquiredReadyToParce object:nil];
-    }
+                                                 name:NotificationTokenWasAcquiredReadyToParce object:nil];
     return loader;
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.dataSource = [[IADataSource alloc]initWithDelegate:self];
+    }
+    return self;
 }
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-#warning вместо get лучше "load" или "request", так как операция длительная, а не мгновенная. И также в имени метода урл пишется либо уже весь капсом, либо camel case'ом
-- (void)getTokenWithRecievedURl:(NSURL *)url{
-    [IALogin loginWithURL:url];
+- (void)requestTokenWithRecievedURL:(NSURL *)url{
+    [IALoginService loginWithURL:url];
 }
 
 - (void)needMore{
     if ([[NSUserDefaults standardUserDefaults] stringForKey:@"token"]) {
-        [IAApiClient getDataNextURL:self.nextUrl completeBlock:^(NSDictionary *answer) {
+        [IAApiClient loadDataNextURL:self.nextUrl completeBlock:^(NSDictionary *answer) {
 #warning здесь нужен weakSelf
             [self parseDataDictionary:answer];
         }failure:^(NSError *error) {

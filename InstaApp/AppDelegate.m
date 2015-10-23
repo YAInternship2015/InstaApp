@@ -8,7 +8,7 @@
 #import "AppDelegate.h"
 #import <MagicalRecord/MagicalRecord.h>
 #import <CoreData/CoreData.h>
-#import "IALogin.h"
+#import "IALoginService.h"
 #import "IALoader.h"
 
 #warning у меня пейджинг не заработал
@@ -26,13 +26,12 @@
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
     NSLog(@"url recieved: %@", url);
-    [[IALoader dataLoader]getTokenWithRecievedURl:url];
+    [[IALoader dataLoader]requestTokenWithRecievedURL:url];
     return YES;
 }
 
