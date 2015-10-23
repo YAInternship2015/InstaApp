@@ -21,6 +21,7 @@ int const kValueToUploadCollection = 3;
 @implementation IACollectionViewController
 
 - (void)viewDidLoad {
+#warning забыли вызвать метод у super
     self.dataSource = [[IADataSource alloc]initWithDelegate:self];
 }
 

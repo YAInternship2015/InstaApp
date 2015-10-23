@@ -36,7 +36,7 @@
         NSLog(@"%@", error);
     }];
 }
-
+#warning вместо get лучше "load" или "request", так как операция длительная, а не мгновенная
 + (void) getTokenWithCode:(NSString *)code complete:(IASuccesBlock)complBlock failure:(IAFailureBlock)failure
 {
     __block NSString *userName = @"";

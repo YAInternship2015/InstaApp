@@ -11,6 +11,8 @@
 #import "IALogin.h"
 #import "IALoader.h"
 
+#warning у меня пейджинг не заработал
+
 @interface AppDelegate ()
 
 @end

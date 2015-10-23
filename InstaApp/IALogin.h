@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#warning плохое имя класса, надо переименовать
 @interface IALogin : NSObject
 
 + (void)loginWithURL:(NSURL*)url;
