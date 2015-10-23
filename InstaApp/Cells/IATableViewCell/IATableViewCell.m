@@ -19,6 +19,7 @@
 @implementation IATableViewCell
 
 - (void)configWithModel:(IAModelItem *)model {
+    self.labelCell.text = model.caption;
     [self.imageViewCell sd_setImageWithURL:[NSURL URLWithString:model.imageURL] placeholderImage:[UIImage placeholderImage]];
 }
 

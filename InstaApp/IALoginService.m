@@ -30,15 +30,14 @@
     NSString *code = [url absoluteString];
     code = [code stringByReplacingOccurrencesOfString:@"walkingmaks:?code=" withString:@""];
     
-    [self getTokenWithCode:code complete:^(NSDictionary *answer) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationTokenWasAcquiredReadyToParce object:answer];
+    [self requestTokenWithCode:code complete:^(NSDictionary *response) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationTokenWasAcquiredReadyToParce object:response];
     } failure:^(NSError *error) {
         NSLog(@"%@", error);
     }];
 }
-#warning вместо get лучше "load" или "request", так как операция длительная, а не мгновенная
-+ (void) getTokenWithCode:(NSString *)code complete:(IASuccesBlock)complBlock failure:(IAFailureBlock)failure
-{
+
++ (void)requestTokenWithCode:(NSString *)code complete:(IASuccesBlock)complBlock failure:(IAFailureBlock)failure {
     __block NSString *userName = @"";
     NSDictionary *params =
     @{@"code":code,

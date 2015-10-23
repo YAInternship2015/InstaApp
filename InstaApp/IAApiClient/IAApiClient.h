@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#warning Success, и лучше не answer, а response
-typedef void (^IASuccesBlock)(NSDictionary *answer);
+typedef void (^IASuccesBlock)(NSDictionary *response);
 typedef void (^IAFailureBlock)(NSError *error);
 
 @interface IAApiClient : NSObject

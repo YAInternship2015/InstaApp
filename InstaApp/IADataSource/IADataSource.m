@@ -11,8 +11,6 @@
 
 #import <MagicalRecord/MagicalRecord.h>
 
-static NSString *const kName = @"text";
-
 @interface IADataSource()<NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
