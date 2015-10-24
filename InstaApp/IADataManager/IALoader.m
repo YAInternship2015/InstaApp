@@ -28,11 +28,12 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         loader = [[IALoader alloc] init];
+        [[NSNotificationCenter defaultCenter] addObserver:loader selector:@selector(needMore)
+                                                     name:NotificationNewDataNeedToDownload object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:loader selector:@selector(parseDataWithNotification:)
+                                                     name:NotificationTokenWasAcquiredReadyToParce object:nil];
     });
-    [[NSNotificationCenter defaultCenter] addObserver:loader selector:@selector(needMore)
-                                                 name:NotificationNewDataNeedToDownload object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:loader selector:@selector(parseDataWithNotification:)
-                                                 name:NotificationTokenWasAcquiredReadyToParce object:nil];
+    
     return loader;
 }
 

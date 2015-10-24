@@ -10,11 +10,14 @@
 #import "IACollectionViewCell.h"
 #import "IADataSource.h"
 
+
 int const kValueToUploadCollection = 3;
 
-@interface IACollectionViewController()<IADataSourceDelegate>
+
+@interface IACollectionViewController()<IADataSourceDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, strong) IADataSource *dataSource;
+@property (nonatomic, strong) NSMutableArray *itemChanges;
 
 @end
 
@@ -30,12 +33,15 @@ int const kValueToUploadCollection = 3;
     [self.collectionView reloadData];
 }
 
+#pragma mark UICollectionViewDelegate
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return [self.dataSource countOfModels];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    IACollectionViewCell *cell = (IACollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CollectionViewCellID forIndexPath:indexPath];
+//    IACollectionViewCell *cell = (IACollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CollectionViewCellID forIndexPath:indexPath];
+    IACollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CollectionViewCellID forIndexPath:indexPath];
     [cell configWithModel:[self.dataSource modelAtIndex:indexPath.row]];
     return cell;
 }
@@ -47,6 +53,7 @@ int const kValueToUploadCollection = 3;
     
 }
 
+
 #pragma mark - DDModelsDataSourceDelegate
 
 - (void)contentWasChangedAtIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
@@ -55,9 +62,11 @@ int const kValueToUploadCollection = 3;
         [self.collectionView insertItemsAtIndexPaths:@[newIndexPath]];
     } else if (type == NSFetchedResultsChangeDelete) {
         [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
-    } else {
-        [self.collectionView reloadData];
     }
+//    else {
+//        [self.collectionView reloadData];
+//    }
+    
 }
 
 @end
