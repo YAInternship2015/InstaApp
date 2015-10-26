@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+#warning у имени категории должен быть префикс приложения
 @interface UIImage (setNoImage)
 
 + (UIImage *)placeholderImage;

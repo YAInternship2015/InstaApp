@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#warning не знаю как у вас, но у меня пейджинг не работает
-
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

@@ -28,6 +28,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         loader = [[IALoader alloc] init];
+#warning подписки на нотификейшны надо тоже перенести в init
         [[NSNotificationCenter defaultCenter] addObserver:loader selector:@selector(needMore)
                                                      name:NotificationNewDataNeedToDownload object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:loader selector:@selector(parseDataWithNotification:)
@@ -57,6 +58,7 @@
     if ([[NSUserDefaults standardUserDefaults] stringForKey:@"token"]) {
         __weak typeof(self) weakSelf = self;
         [IAApiClient loadDataNextURL:self.nextUrl completeBlock:^(NSDictionary *response) {
+#warning съехало выравнивание
         [weakSelf parseDataDictionary:response];
         }failure:^(NSError *error) {
             NSLog(@"%@", error);
